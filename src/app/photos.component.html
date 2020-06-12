@@ -1,0 +1,14 @@
+<mat-card>
+
+  <mat-card-content>
+    <mat-list style="padding-top:20%;" role="list" *ngFor="let photo of photos">
+      <mat-list-item role="listitem"><img style="width:40%" src={{photo.file}} /></mat-list-item><br />
+      <mat-list-item style="padding-top:10%;" role="listitem">{{photo.name}}</mat-list-item>
+      <mat-list-item style="padding-top:2%;" role="listitem">{{photo.description}}</mat-list-item><br />
+    </mat-list>
+  </mat-card-content>
+  <br />
+  <mat-card-actions>
+  </mat-card-actions>
+
+</mat-card>

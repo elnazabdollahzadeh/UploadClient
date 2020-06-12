@@ -1,0 +1,36 @@
+<mat-card>
+  
+  <mat-card-content>
+    <form>
+      <div class="container vh-100">
+        <div class="">
+          <div class="p-1">
+            <video #video class="vid" autoplay></video>
+          </div>
+          <div class="pb-2">
+            <button class="btn btn-primary" (click)="capture()">Capture Image</button>
+          </div>
+          <div class="p-1">
+            <canvas id="photoCanvas" [(ngModel)]="photo.file" #canvas class="vid"></canvas>
+          </div>
+        </div>
+      </div>
+      <mat-form-field class="example-full-width">
+        <mat-label>Photo title:</mat-label>
+        <input matInput [(ngModel)]="photo.name" name="name" placeholder="Put photo title here.">
+      </mat-form-field><br />
+      <mat-form-field class="example-full-width">
+        <mat-label>Photo description:</mat-label>
+        <input matInput [(ngModel)]="photo.description" name="description" placeholder="Put photo description here.">
+      </mat-form-field>
+
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button (click)="upload(photo)" mat-button>Upload Photo</button>
+    <span style="color:green;font-size:12px;" *ngIf="message">
+      {{message}}
+    </span>
+  </mat-card-actions>
+
+</mat-card>
